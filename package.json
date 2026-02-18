@@ -1,6 +1,6 @@
 {
   "name": "@leryk1981/mova-arena-profile",
-  "version": "0.1.0",
+  "version": "5.0.0",
   "private": false,
   "description": "MOVA Arena Profile: domain extension schemas for observability normalization and arena comparison.",
   "license": "Apache-2.0",
