@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mova.dev/schemas/ds.arena_agent_match_submission_v1.schema.json",
+  "title": "ds.arena_agent_match_submission_v1",
+  "description": "Arena profile record describing one agent submission for benchmark match execution.",
+  "allOf": [
+    {
+      "$ref": "https://mova.dev/schemas/ds.mova_schema_core_v1.schema.json"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "submission_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "match_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "agent_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runner_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "agent_contract_ref": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Reference to core agent contract (ds.mova_agent_contract_core_v1 instance)."
+        },
+        "task_contract_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sdk_info": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "sdk_name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sdk_version": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "sdk_name",
+            "sdk_version"
+          ]
+        },
+        "observability_artifacts": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "expanded_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "compact_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "semantic_ref": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "expanded_ref",
+            "compact_ref"
+          ]
+        },
+        "submitted_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "submission_id",
+        "match_id",
+        "task_id",
+        "agent_id",
+        "runner_id",
+        "agent_contract_ref",
+        "task_contract_ref",
+        "sdk_info",
+        "observability_artifacts",
+        "submitted_at"
+      ]
+    }
+  ]
+}

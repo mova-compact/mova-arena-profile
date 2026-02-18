@@ -5,6 +5,8 @@ Domain extension for MOVA that standardizes observability records used by MOV Ar
 - contact execute step (`ds.mova_contact_step_core_v1`)
 - compact capture step (`ds.mova_compact_capture_step_core_v1`)
 - unified arena comparison row (`ds.mova_observability_step_core_v1`)
+- arena agent match submission (`ds.arena_agent_match_submission_v1`, `env.arena_agent_submission_v1`)
+- arena certification request (`ds.arena_agent_certification_request_v1`, `env.arena_agent_certification_request_v1`)
 
 This repository is intentionally separate from `mova-spec` core.
 
@@ -19,6 +21,7 @@ This repository is intentionally separate from `mova-spec` core.
 - `schemas/` profile schemas
 - `examples/` valid payload examples
 - `docs/mova_4.1.1_compact_contact_alignment.md` field mapping and normalization contract
+- `docs/ARENA_AGENT_PROFILE_V1.md` agent submission/certification flow for arena
 
 ## Validate
 

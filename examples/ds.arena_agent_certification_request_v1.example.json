@@ -1,0 +1,9 @@
+{
+  "request_id": "cert-req-001",
+  "submission_ref": "arena://match/match-2026-02-18-001/submission/sub-001",
+  "referee_verdict_ref": "arena://match/match-2026-02-18-001/verdict",
+  "evidence_bundle_ref": "arena://runs/run-001/evidence_bundle",
+  "verification_report_ref": "arena://runs/run-001/verification_report",
+  "requested_level": "L4",
+  "requested_at": "2026-02-18T12:15:00Z"
+}

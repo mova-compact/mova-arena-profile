@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mova.dev/schemas/ds.arena_agent_certification_request_v1.schema.json",
+  "title": "ds.arena_agent_certification_request_v1",
+  "description": "Arena profile record for certification request based on match artifacts and referee verdict.",
+  "allOf": [
+    {
+      "$ref": "https://mova.dev/schemas/ds.mova_schema_core_v1.schema.json"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "submission_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "referee_verdict_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_bundle_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verification_report_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requested_level": {
+          "type": "string",
+          "enum": [
+            "L1",
+            "L2",
+            "L3",
+            "L4"
+          ]
+        },
+        "requested_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "request_id",
+        "submission_ref",
+        "referee_verdict_ref",
+        "evidence_bundle_ref",
+        "verification_report_ref",
+        "requested_level",
+        "requested_at"
+      ]
+    }
+  ]
+}
