@@ -1,0 +1,26 @@
+{
+  "name": "@leryk1981/mova-arena-profile",
+  "version": "0.1.0",
+  "private": false,
+  "description": "MOVA Arena Profile: domain extension schemas for observability normalization and arena comparison.",
+  "license": "Apache-2.0",
+  "author": "Sergii Miasoiedov",
+  "type": "commonjs",
+  "bin": {
+    "mova-arena-validate": "bin/mova-arena-validate.mjs"
+  },
+  "files": [
+    "schemas/**",
+    "examples/**",
+    "docs/**",
+    "bin/**",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node tools/validate_all.js"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1"
+  }
+}
